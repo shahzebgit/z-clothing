@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from 'react-router-dom'
-import CollectionsOverview from '../../components/collection-overview/collection-overview.component'
-import CollectionsPage  from '../collections/collections.components';
+import CollectionsOverview from '../../components/collections-overview/collections-overview.component'
+import CollectionsPage  from '../collection/collection.component';
 
 const ShopPage = ({match}) => {
   return (
