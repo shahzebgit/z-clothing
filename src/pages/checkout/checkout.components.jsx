@@ -5,17 +5,17 @@ import { createStructuredSelector } from "reselect";
 import {
   selectCartItems,
   selectCartTotal,
-} from "../../Redux/cart/cart.selectors";
-import StripeCheckoutButton from '../../components/stripe-button/stripe-button.component'
+} from "../../redux/cart/cart.selectors";
+import StripeCheckoutButton from "../../components/stripe-button/stripe-button.component";
 
-import CheckoutItem from '../../components/checkout-item/checkout-item.component'
+import CheckoutItem from "../../components/checkout-item/checkout-item.component";
 
-import './checkout.styles.scss';
+import "./checkout.styles.scss";
 
 const CheckoutPage = ({ cartItems, total }) => (
-  <div className='checkout-page'>
-    <div className='checkout-header'>
-      <div className='header-block'>
+  <div className="checkout-page">
+    <div className="checkout-header">
+      <div className="header-block">
         <span>Product</span>
       </div>
       <div className="header-block">
@@ -31,18 +31,16 @@ const CheckoutPage = ({ cartItems, total }) => (
         <span>Remove</span>
       </div>
     </div>
-    {
-        cartItems.map(cartItem =>
-            <CheckoutItem key={cartItem.id} cartItem={cartItem}/>
-            )
-    }
+    {cartItems.map((cartItem) => (
+      <CheckoutItem key={cartItem.id} cartItem={cartItem} />
+    ))}
     <div className="total">
-    <span >Total: ${total}</span>
+      <span>Total: ${total}</span>
     </div>
-    <div className='test-warning'> 
-    Note: Please use the test card info given 
-    <br/>
-    *4242 4242 4242  01/22 CVV:123 * 
+    <div className="test-warning">
+      Note: Please use the test card info given
+      <br />
+      *4242 4242 4242 01/22 CVV:123 *
     </div>
     <StripeCheckoutButton price={total} />
   </div>
@@ -53,4 +51,4 @@ const mapStatetoProps = createStructuredSelector({
   total: selectCartTotal,
 });
 
-export default connect( mapStatetoProps)(CheckoutPage);
+export default connect(mapStatetoProps)(CheckoutPage);
