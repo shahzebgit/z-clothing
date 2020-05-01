@@ -10,8 +10,8 @@ import ShopPage from './pages/shop pages/shop'
 import SignInPage from './pages/Sign In and Reg/sign-in.component'
 import CheckoutPage from './pages/checkout/checkout.components'
 
-import { setCurrentUser } from './Redux/user/user-action';
-import { selectCurrentUser } from './Redux/user/user.selector'
+import { setCurrentUser } from './redux/user/user-action';
+import { selectCurrentUser } from './redux/user/user.selector'
 
 import { auth, createUserProfileDocument } from './firebase/firebase.util';
 
