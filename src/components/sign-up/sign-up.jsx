@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FormInput from '../form-input/form-input';
-import CusButton from '../custom-button/custom-button';
+import CustomButton from '../custom-button/custom-button';
 
 
 import { auth, createUserProfileDocument } from '../../firebase/firebase.util';
@@ -101,7 +101,7 @@ class SignUp extends React.Component {
                         onChange={this.handleChange}
                         required />
 
-            <CusButton type='submit'>SIGN UP</CusButton>
+            <CustomButton type='submit'>SIGN UP</CustomButton>
 
                 </form>
             </div>
