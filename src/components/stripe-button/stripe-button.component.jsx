@@ -16,12 +16,12 @@ const StripeCheckoutButton = ({ price }) =>{
         billingAddress
         shippingAddress
         image='https://sendeyo.com/up/d/f3eb2117da'
-        description={`Your total is $${price}`}
+        description={`Your total is ₹${price}`}
         amount={priceForStripe}
         panelLabel='Pay Now'
         token={onToken}
         stripeKey={publishKey}
-        
+        currency="INR"
         />
     );
 
