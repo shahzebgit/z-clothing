@@ -20,13 +20,21 @@ class ShopPage extends React.Component {
   unsubscribeFromSnapshot = null;
 
   componentDidMount(){
-    const collectionRef = firestore.collection('collections');
-    const {updateCollections} =this.props
-    collectionRef.onSnapshot(async snapshot =>{
+    const collectionRef = firestore.collection('collections'); 
+
+    const {updateCollections} =this.props;
+
+    // fetch('https://firestore.googleapis.com/v1/projects/z-clothing/databases/(default)/documents/collections')
+    // .then(respone => respone.json())
+    // .then(collections => console.log(collections));
+
+    collectionRef.get().then( (async snapshot =>{
       const collectionMap = convertCollectionSnapshotToMap(snapshot);
       updateCollections(collectionMap);
       this.setState({loading:false})
-    })
+    }))
+
+   
   }
 
   render() {
