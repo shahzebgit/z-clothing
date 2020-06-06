@@ -1,0 +1,3 @@
+Use this CLI only to commit in past days if you forgot :P
+
+git commit --amend --no-edit --date="Fri Nov 6 20:00:00 2015 -0600"
