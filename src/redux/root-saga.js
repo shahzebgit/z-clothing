@@ -4,6 +4,8 @@ import { fetchCollectionsStart } from "./shop/shop.sagas";
 
 import {userSagas} from './user/user-saga'
 
+import {cartSaga} from './cart/cart-saga'
+
 export default function* rootSaga() {
-  yield all([call(fetchCollectionsStart),call(userSagas)]);
+  yield all([call(fetchCollectionsStart),call(userSagas),call(cartSaga)]);
 }
