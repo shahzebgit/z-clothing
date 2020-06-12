@@ -8,7 +8,6 @@ import CustomButton from "../../components/custom-button/custom-button";
 
 import {googleSignInStart,emailSignInStart} from '../../redux/user/user-action'
 
-
 class SignIn extends React.Component {
   constructor(props) {
     super(props);
