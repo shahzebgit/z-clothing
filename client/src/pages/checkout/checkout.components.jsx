@@ -34,20 +34,20 @@ const CheckoutPage = ({ cartItems, total }) => (
     {cartItems.map((cartItem) => (
       <CheckoutItem key={cartItem.id} cartItem={cartItem} />
     ))}
-    <div className="total">
-      <span>Total:  ₹{total}</span>
-    </div>
     <div className="test-warning">
       Note: Please use the test card info given
       *4242 4242 4242 01/22 CVV:123 *
+    </div>
+    <div className="total">
+      <span>Total:  ₹{total}</span>
     </div>
     <StripeCheckoutButton price={total} />
   </div>
 );
 
-const mapStatetoProps = createStructuredSelector({
+const mapStateToProps = createStructuredSelector({
   cartItems: selectCartItems,
   total: selectCartTotal,
 });
 
-export default connect(mapStatetoProps)(CheckoutPage);
+export default connect(mapStateToProps)(CheckoutPage);

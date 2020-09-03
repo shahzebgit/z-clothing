@@ -1,6 +1,19 @@
-.sign-in-page{
-    width: 1000px;
-    display: flex;
-    justify-content: space-between;
-    margin: 30px auto;
+.sign-in-page {
+  display: flex;
+  width: 850px;
+  justify-content: space-between;
+  margin: 30px auto;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    width:unset;
+    text-transform: capitalize;
+    
+
+    font-weight: 700;
+    > *:first-child {
+      margin-bottom: 50px;
+    }
+  }
 }
+
