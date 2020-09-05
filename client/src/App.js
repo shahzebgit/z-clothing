@@ -9,6 +9,7 @@ import { selectCurrentUser } from "./redux/user/user.selector";
 import { checkUserSession } from "./redux/user/user-action";
 
 import { GlobalStyles } from "./global.styles.js";
+import Spinner from "./components/spinner/spinner.component";
 
 const HomePage = lazy(() => import("./pages/homepage/homepage.component"));
 const ShopPage = lazy(() => import("./pages/shop pages/shop"));
@@ -25,7 +26,7 @@ const App = ({ checkUserSession, currentUser }) => {
       <GlobalStyles />
       <Header />
       <Switch>
-        <Suspense fallback={<div>...LOADING</div>}>
+        <Suspense fallback={<Spinner/>}>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage} />
           <Route exact path="/checkout" component={CheckoutPage} />
