@@ -12,7 +12,7 @@ import { GlobalStyles } from "./global.styles.js";
 import Spinner from "./components/spinner/spinner.component";
 
 const HomePage = lazy(() => import("./pages/homepage/homepage.component"));
-const ShopPage = lazy(() => import("./pages/shop pages/shop"));
+const ShopPage = lazy(() => import("./pages/shop pages/shop.component"));
 const SignInPage = lazy(() => import("./pages/registration-page/registration"));
 const CheckoutPage = lazy(() => import("./pages/checkout/checkout.components"));
 
