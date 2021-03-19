@@ -23,7 +23,7 @@
         "express": "^4.17.1",
         "express-sslify": "^1.2.0",
         "nodemon": "^2.0.4",
-        "stripe": "6.28.0"
+        "stripe": "^6.28.0"
     },
     "devDependencies": {
         "concurrently": "^5.2.0"
